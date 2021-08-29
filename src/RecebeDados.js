@@ -18,7 +18,7 @@ export default function RecebeDados(props){
 
   return(
   <>
-   <p>{"X1 será: "+x1} {"X2 será "+x2}</p>
+   <p>{"X1 será: "+x1 + " e X2 será "+x2}</p>
   </>
   );
 }
