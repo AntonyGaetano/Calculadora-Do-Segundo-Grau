@@ -21,8 +21,8 @@ export default function Resultado(props){
   <>
    <br></br>
    <h4>Valores da raizes</h4>
-   <p>{"Valor de x1 = " + x1}</p>
-   <p>{"Valor de x2 = " + x2}</p>
+   <p>{(x1 < 0 && x2 < 0 )? "Valor de x1 = " + x1 + " Valor de x2 = " + x2 : "A equação possui raizes imaginárias"}</p>
+   
   </>);
   
 }
