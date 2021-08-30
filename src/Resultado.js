@@ -19,6 +19,8 @@ export default function Resultado(props){
 
   return(
   <>
+   <br></br>
+   <h4>Valores da raizes</h4>
    <p>{"Valor de x1 = " + x1}</p>
    <p>{"Valor de x2 = " + x2}</p>
   </>);

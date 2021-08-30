@@ -7,7 +7,7 @@ export default function RecebeDados(props){
      width:"126px",
      border:"none",
      borderBottom:'2px solid black', 
-     margin:"0 0.8rem",
+     margin:"1.5rem 0.8rem",
      textAlign:"center",
    }
 
@@ -27,15 +27,17 @@ export default function RecebeDados(props){
 
   return(
   <>
+   <h3 style={{fontFamily:"cursive"}}>Calculadora Do Segundo Grau</h3> 
+
    <input style={Style_input} type="number" value={form.inputA} placeholder="Digite o valor de A" name="valorA" onChange={(e)=>Manipulando(e)}/>
 
    <input style={Style_input}  type="number" value={form.inputB} placeholder="Digite o valor de B" name="valorB" onChange={(e)=>Manipulando(e)}/>
 
    <input style={Style_input}  type="number" value={form.inputC} placeholder="Digite o valor de C" name="valorC" onChange={(e)=>Manipulando(e)}/>
 
-   <p>{"Valor de A: " + form.inputA}</p>
-   <p>{"Valor de B: " + form.inputB}</p>
-   <p>{"Valor de C: " + form.inputC}</p>
+   <p>{"Valor de A informado: " + form.inputA}</p>
+   <p>{"Valor de B informado: " + form.inputB}</p>
+   <p>{"Valor de C informado: " + form.inputC}</p>
 
    <Resultado ValorA={form.inputA} ValorB={form.inputB} ValorC={form.inputC}/>
   </>
