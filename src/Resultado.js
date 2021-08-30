@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function RecebeDados(props){
+export default function Resultado(props){
 /*
  var A;
  var B;
