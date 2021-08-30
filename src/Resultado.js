@@ -19,8 +19,8 @@ export default function Resultado(props){
 
   return(
   <>
-   <p>{"Valor de x1 " + x1}</p>
-   <p>{"Valor de x2 " + x2}</p>
+   <p>{"Valor de x1 = " + x1}</p>
+   <p>{"Valor de x2 = " + x2}</p>
   </>);
   
 }
