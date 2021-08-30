@@ -1,24 +1,34 @@
-import React from 'react';
+import React,{useState} from 'react';
+import Resultado from './Resultado'
 
 export default function RecebeDados(props){
- var A;
- var B;
- var C;
- var raiz;
+ 
+   const[form, setform] = useState({'inputA':'','inputB':'','inputC':'' });
 
- A = props.letraA;
- B = props.letraB;
- C = props.letraC;
-
- var delta = (B*B - 4*A*C);
-  raiz = Math.sqrt(delta);
-
- var x1 = (-B+raiz)/2*A;
- var x2 = (-B-raiz)/2*A;
+   const Manipulando = (e) =>{
+     if(e.target.getAttribute("name") === "valorA"){
+       setform({'inputA':e.target.value,'inputB':form.inputB,'inputC':form.inputC});
+     }
+     else if(e.target.getAttribute("name") === "valorB"){
+      setform({'inputA':form.inputA,'inputB':e.target.value,'inputC':form.inputC});
+    }
+    else if(e.target.getAttribute("name") === "valorC"){
+      setform({'inputA':form.inputA,'inputB':form.inputB,'inputC':e.target.value});
+    }
+   }
 
   return(
   <>
-   <p>{"X1 será: "+x1 + " e X2 será "+x2}</p>
+   <input type="number" name="valorA" onChange={(e)=>Manipulando(e)}/>
+
+   <input type="number" name="valorB" onChange={(e)=>Manipulando(e)}/>
+
+   <input type="number" name="valorC" onChange={(e)=>Manipulando(e)}/>
+
+   <p>{"Valor de A: " + form.inputA}</p>
+   <p>{"Valor de B: " + form.inputB}</p>
+   <p>{"Valor de C: " + form.inputC}</p>
+
   </>
   );
 }
