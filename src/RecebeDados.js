@@ -7,6 +7,8 @@ export default function RecebeDados(props){
      width:"126px",
      border:"none",
      borderBottom:'2px solid black', 
+     margin:"0 0.8rem",
+     textAlign:"center",
    }
 
    const[form, setform] = useState({'inputA':'','inputB':'','inputC':'' });
@@ -27,9 +29,9 @@ export default function RecebeDados(props){
   <>
    <input style={Style_input} type="number" value={form.inputA} placeholder="Digite o valor de A" name="valorA" onChange={(e)=>Manipulando(e)}/>
 
-   <input type="number" value={form.inputB} placeholder="Digite o valor de B" name="valorB" onChange={(e)=>Manipulando(e)}/>
+   <input style={Style_input}  type="number" value={form.inputB} placeholder="Digite o valor de B" name="valorB" onChange={(e)=>Manipulando(e)}/>
 
-   <input type="number" value={form.inputC} placeholder="Digite o valor de C" name="valorC" onChange={(e)=>Manipulando(e)}/>
+   <input style={Style_input}  type="number" value={form.inputC} placeholder="Digite o valor de C" name="valorC" onChange={(e)=>Manipulando(e)}/>
 
    <p>{"Valor de A: " + form.inputA}</p>
    <p>{"Valor de B: " + form.inputB}</p>
