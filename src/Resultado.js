@@ -17,12 +17,19 @@ export default function Resultado(props){
  var x1 = (-B+raiz)/2*A;
  var x2 = (-B-raiz)/2*A; 
 
+ const Dados = () =>{
+
+ return(
+  <>
+  {alert(x1 + "e" + x2)}
+  </>);
+ }
+
+
   return(
   <>
-   <br></br>
-   <h4>Valores da raizes</h4>
-   <p>{(x1 < 0 && x2 < 0 )? "Valor de x1 = " + x1 + " Valor de x2 = " + x2 : "A equação possui raizes imaginárias"}</p>
-   
+  <button style={{padding:"8px"}} onClick={()=>Dados()}>Calcular</button>
+
   </>);
   
 }
