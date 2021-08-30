@@ -19,17 +19,16 @@ export default function Resultado(props){
 
  const Dados = () =>{
 
- return(
-  <>
-  {alert(x1 + "e" + x2)}
-  </>);
- }
-
+  return(
+   <>
+   {alert(x1>=0&&x2>=0 ? "Valor de x1 = " + x1 + " Valor de x2 = " + x2 : "Raizes menores que zero")}
+   </>);
+  }
 
   return(
   <>
   <button style={{padding:"8px"}} onClick={()=>Dados()}>Calcular</button>
 
   </>);
-  
+
 }
