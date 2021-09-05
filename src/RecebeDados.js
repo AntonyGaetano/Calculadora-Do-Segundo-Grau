@@ -27,8 +27,6 @@ export default function RecebeDados(){
 
    }
 
-
-
   return(
   <>
    <h3 style={{fontFamily:"cursive"}}>Calculadora Do Segundo Grau</h3> 
@@ -40,6 +38,7 @@ export default function RecebeDados(){
    <input style={Style_input}  type="number" value={form.inputC} placeholder="Digite o valor de C" name="valorC" onChange={(e)=>Manipulando(e)}/><br/>
 
    <Resultado ValorA={form.inputA} ValorB={form.inputB} ValorC={form.inputC}/>
+
   </>
   );
 }
