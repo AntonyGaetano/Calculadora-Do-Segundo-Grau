@@ -18,13 +18,18 @@ export default function Resultado(props){
  var x1 = (-B+raiz)/2*A;
  var x2 = (-B-raiz)/2*A; 
 
+/*
  const Dados = () =>{
-
   return(
    <>
-   {/*alert(x1>=0&&x2>=0 ? "Valor de x1 = " + x1 + " Valor de x2 = " + x2 : "Raizes menores que zero")*/}
-
+   {alert(x1>=0&&x2>=0 ? "Valor de x1 = " + x1 + " Valor de x2 = " + x2 : "Raizes menores que zero")}
+   
    </>);
+  } */
+
+  const Dados=()=>{
+     return( <p>Ola</p>);
+     
   }
 
   return(
