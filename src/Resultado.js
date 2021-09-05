@@ -1,5 +1,12 @@
 import React from 'react';
 
+const Dados=()=>{
+  return(
+   <>
+    <h1>Opa</h1>
+   </>);
+}
+
 export default function Resultado(props){
 
  var A;
@@ -17,18 +24,10 @@ export default function Resultado(props){
  var x1 = (-B+raiz)/2*A;
  var x2 = (-B-raiz)/2*A; 
 
- const Dados = () =>{
-
-  return(
-   <>
-   {alert(x1>=0&&x2>=0 ? "Valor de x1 = " + x1 + " Valor de x2 = " + x2 : "Raizes menores que zero")}
-   </>);
-  }
-
   return(
   <>
-  <button style={{padding:"8px"}} onClick={()=>Dados()}>Calcular</button>
-
+  <button style={{padding:"8px"}}    onClick="">Calcular</button>
+   
+  <Dados/>
   </>);
-
 }
