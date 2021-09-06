@@ -68,7 +68,7 @@ const Calcular = (a,b,c,sr1,sr2) =>{
     }
     return(
         <div>
-            <button onClick={calc}>Calcular</button>
+            <button style={{padding:"0.6rem 1.3rem", backgroundColor:"#282c34", color:"white", borderRadius:"5px"}} onClick={calc}>Calcular</button>
         </div>
     )
 }
