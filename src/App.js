@@ -13,7 +13,7 @@ const Style_input = {
   }
 
 const Style_p = {
-   fontFamily:"cursive",
+   fontFamily:"serif",
 }
 
 const ValorA = (a,sa)=>{
@@ -55,15 +55,31 @@ const Calcular = (a,b,c,sr1,sr2) =>{
         var B = b;
         var C = c;
         var Raiz;
+        var x1;
+        var x2;
         
         var delta = (B*B - 4*A*C);
-        Raiz = Math.sqrt(delta);
+        if(delta >= 0){
+            
+            Raiz = Math.sqrt(delta);
        
-        var x1 = (-B+Raiz)/2*A;
-        var x2 = (-B-Raiz)/2*A;
-     
-        sr1(x1);
-        sr2(x2);
+             x1 = (-B+Raiz)/2*A;
+             x2 = (-B-Raiz)/2*A;
+         
+            sr1(x1);
+            sr2(x2);
+        }
+        else{
+            Raiz = Math.sqrt(delta*-1);
+           alert("O resultado é raizes imaginárias")
+             x1 = -B/2*A+" + "+Raiz/2*A+"i";
+             x2 = -B/2*A+" - "+Raiz/2*A+"i";
+
+           sr1(x1);
+           sr2(x2);
+           
+        }
+    
 
     }
     return(
@@ -76,8 +92,8 @@ const Calcular = (a,b,c,sr1,sr2) =>{
 const Resultado = (r1,r2) =>{
     return(
     <div>
-        <p style={Style_p} >{"Resultado de x1:  " + r1.toFixed(1)}</p>
-        <p style={Style_p}>{"Resultado de x2:  " + r2.toFixed(1)}</p>
+        <p style={Style_p} >{"Resultado de x1:  " + r1}</p>
+        <p style={Style_p}>{"Resultado de x2:  " + r2}</p>
     </div>
     )
 }
