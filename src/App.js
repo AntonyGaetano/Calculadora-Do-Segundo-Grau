@@ -61,9 +61,10 @@ const Calcular = (a,b,c,sr1,sr2) =>{
        
         var x1 = (-B+Raiz)/2*A;
         var x2 = (-B-Raiz)/2*A;
-        
+     
         sr1(x1);
         sr2(x2);
+
     }
     return(
         <div>
