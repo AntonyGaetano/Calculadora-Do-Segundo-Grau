@@ -2,17 +2,6 @@ import React,{useState} from "react";
 import './App.css';
 import RecebeValores from "./RecebeValores";
 
-const Style_input = {
-    width:"126px",
-    border:"none",
-    borderBottom:'2px solid black', 
-    margin:"1.5rem 0.8rem",
-    textAlign:"center",
-    padding:'0.3rem',
-    fontSize:'15px',
-    fontFamily:"cursive"
-  }
-
 const Style_p = {
    fontFamily:"serif",
 }
@@ -79,10 +68,9 @@ export default function App2(){
     return(
      <section>
        <h3 style={{fontFamily:"cursive"}}>Calculadora Do Segundo Grau</h3> 
-       <div className="input-dados"> 
+
        <RecebeValores a={valorA} sa={setValorA} b={valorB} sb={setValorB} c={valorC} sc={setValorC}/>
-       
-       </div>
+      
        {Calcular(valorA,valorB,valorC,setraiz1,setraiz2)}
        {Resultado(Resultado_raiz1,Resultado_raiz2)}
      </section>
