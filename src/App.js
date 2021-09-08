@@ -1,51 +1,12 @@
 import React,{useState} from "react";
 import './App.css';
 import RecebeValores from "./RecebeValores";
+import Calcular from "./Calcular";
 
 const Style_p = {
    fontFamily:"serif",
 }
 
-
-const Calcular = (a,b,c,sr1,sr2) =>{
-    const calc = () =>{
-        var A = a;
-        var B = b;
-        var C = c;
-        var Raiz;
-        var x1;
-        var x2;
-        
-        var delta = (B*B - 4*A*C);
-        if(delta >= 0){
-            
-            Raiz = Math.sqrt(delta);
-       
-             x1 = (-B+Raiz)/2*A;
-             x2 = (-B-Raiz)/2*A;
-         
-            sr1(x1);
-            sr2(x2);
-        }
-        else{
-            Raiz = Math.sqrt(delta*-1);
-           alert("O resultado é raizes imaginárias")
-             x1 = -B/2*A+" + "+Raiz/2*A+"i";
-             x2 = -B/2*A+" - "+Raiz/2*A+"i";
-
-           sr1(x1);
-           sr2(x2);
-           
-        }
-    
-
-    }
-    return(
-        <div>
-            <button style={{padding:"0.6rem 1.3rem", backgroundColor:"#282c34", color:"white", borderRadius:"5px"}} onClick={calc}>Calcular</button>
-        </div>
-    )
-}
 
 const Resultado = (r1,r2) =>{
     return(
@@ -71,7 +32,8 @@ export default function App2(){
 
        <RecebeValores a={valorA} sa={setValorA} b={valorB} sb={setValorB} c={valorC} sc={setValorC}/>
       
-       {Calcular(valorA,valorB,valorC,setraiz1,setraiz2)}
+       <Calcular a={valorA} b={valorB} c={valorC} sr1={setraiz1} sr2={setraiz2}/>
+       
        {Resultado(Resultado_raiz1,Resultado_raiz2)}
      </section>
     )

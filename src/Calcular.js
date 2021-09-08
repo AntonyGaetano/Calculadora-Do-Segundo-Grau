@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Calcular = (a,b,c,sr1,sr2) =>{
+const Calculo = (a,b,c,sr1,sr2) =>{
     const calc = () =>{
         var A = a;
         var B = b;
@@ -43,7 +43,10 @@ const Calcular = (a,b,c,sr1,sr2) =>{
 
 
 export default function Calcular(props){
+
     return(
-     {Calcular(props.a, props.b, props.c, props.sr1, props.sr2)}
+    <>
+     {Calculo(props.a, props.b, props.c, props.sr1, props.sr2)}
+    </>
     );
 }
