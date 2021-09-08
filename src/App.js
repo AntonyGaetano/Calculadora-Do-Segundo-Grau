@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import './App.css';
+import RecebeValores from "./RecebeValores";
 
 const Style_input = {
     width:"126px",
@@ -16,38 +17,6 @@ const Style_p = {
    fontFamily:"serif",
 }
 
-const ValorA = (a,sa)=>{
-  return(
-   <div>
-       <labe>
-           ValorA:
-           <input style={Style_input} type="text" value={a} onChange={(e)=>sa(e.target.value)}/>
-       </labe>
-   </div>
-  )
-}
-
-const ValorB = (b,sb)=>{
-    return(
-        <div>
-            <labe>
-                ValorB:
-                <input style={Style_input} type="text" value={b} onChange={(e)=>sb(e.target.value)}/>
-            </labe>
-        </div>
-       )
-}
-
-const ValorC = (c,sc)=>{
-    return(
-        <div>
-            <labe>
-                ValorC:
-                <input style={Style_input} type="text" value={c} onChange={(e)=>sc(e.target.value)}/>
-            </labe>
-        </div>
-       )
-}
 
 const Calcular = (a,b,c,sr1,sr2) =>{
     const calc = () =>{
@@ -111,9 +80,8 @@ export default function App2(){
      <section>
        <h3 style={{fontFamily:"cursive"}}>Calculadora Do Segundo Grau</h3> 
        <div className="input-dados"> 
-         {ValorA(valorA,setValorA)}
-         {ValorB(valorB,setValorB)}
-         {ValorC(valorC,setValorC)}
+       <RecebeValores a={valorA} sa={setValorA} b={valorB} sb={setValorB} c={valorC} sc={setValorC}/>
+       
        </div>
        {Calcular(valorA,valorB,valorC,setraiz1,setraiz2)}
        {Resultado(Resultado_raiz1,Resultado_raiz2)}
